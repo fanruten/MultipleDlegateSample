@@ -12,7 +12,6 @@
 
 @interface PTCMultipleDelegate ()
 
-@property (nonatomic, copy) NSMutableArray *selectors;
 @property (nonatomic, weak) id mainDelegate;
 @property (nonatomic, strong) NSPointerArray *delegates;
 
