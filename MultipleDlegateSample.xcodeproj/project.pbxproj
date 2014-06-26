@@ -21,8 +21,6 @@
 		D1F5D0D6195C6E37008DD1B2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F5D0D5195C6E37008DD1B2 /* XCTest.framework */; };
 		D1F5D0D7195C6E37008DD1B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F5D0B3195C6E37008DD1B2 /* Foundation.framework */; };
 		D1F5D0D8195C6E37008DD1B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F5D0B7195C6E37008DD1B2 /* UIKit.framework */; };
-		D1F5D0E0195C6E37008DD1B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1F5D0DE195C6E37008DD1B2 /* InfoPlist.strings */; };
-		D1F5D0E2195C6E37008DD1B2 /* MultipleDlegateSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5D0E1195C6E37008DD1B2 /* MultipleDlegateSampleTests.m */; };
 		D1F5D0EC195C6EBE008DD1B2 /* PTCMultipleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5D0EB195C6EBE008DD1B2 /* PTCMultipleDelegate.m */; };
 		D1F5D0EE195C6EC7008DD1B2 /* PTCVerifiableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5D0ED195C6EC7008DD1B2 /* PTCVerifiableTextField.m */; };
 		D1F5D0F6195C6ECF008DD1B2 /* PTCNameValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5D0EF195C6ECF008DD1B2 /* PTCNameValidator.m */; };
@@ -60,9 +58,6 @@
 		D1F5D0CE195C6E37008DD1B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D1F5D0D4195C6E37008DD1B2 /* MultipleDlegateSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipleDlegateSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F5D0D5195C6E37008DD1B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D1F5D0DD195C6E37008DD1B2 /* MultipleDlegateSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipleDlegateSampleTests-Info.plist"; sourceTree = "<group>"; };
-		D1F5D0DF195C6E37008DD1B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1F5D0E1195C6E37008DD1B2 /* MultipleDlegateSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleDlegateSampleTests.m; sourceTree = "<group>"; };
 		D1F5D0EB195C6EBE008DD1B2 /* PTCMultipleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCMultipleDelegate.m; sourceTree = "<group>"; };
 		D1F5D0ED195C6EC7008DD1B2 /* PTCVerifiableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCVerifiableTextField.m; sourceTree = "<group>"; };
 		D1F5D0EF195C6ECF008DD1B2 /* PTCNameValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCNameValidator.m; sourceTree = "<group>"; };
@@ -113,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				D1F5D0B9195C6E37008DD1B2 /* MultipleDlegateSample */,
-				D1F5D0DB195C6E37008DD1B2 /* MultipleDlegateSampleTests */,
 				D1F5D0B2195C6E37008DD1B2 /* Frameworks */,
 				D1F5D0B1195C6E37008DD1B2 /* Products */,
 			);
@@ -164,24 +158,6 @@
 				D1F5D0BC195C6E37008DD1B2 /* InfoPlist.strings */,
 				D1F5D0BF195C6E37008DD1B2 /* main.m */,
 				D1F5D0C1195C6E37008DD1B2 /* MultipleDlegateSample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D1F5D0DB195C6E37008DD1B2 /* MultipleDlegateSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				D1F5D0E1195C6E37008DD1B2 /* MultipleDlegateSampleTests.m */,
-				D1F5D0DC195C6E37008DD1B2 /* Supporting Files */,
-			);
-			path = MultipleDlegateSampleTests;
-			sourceTree = "<group>";
-		};
-		D1F5D0DC195C6E37008DD1B2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1F5D0DD195C6E37008DD1B2 /* MultipleDlegateSampleTests-Info.plist */,
-				D1F5D0DE195C6E37008DD1B2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,7 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F5D0E0195C6E37008DD1B2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F5D0E2195C6E37008DD1B2 /* MultipleDlegateSampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +333,6 @@
 				D1F5D0C6195C6E37008DD1B2 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		D1F5D0DE195C6E37008DD1B2 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1F5D0DF195C6E37008DD1B2 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
