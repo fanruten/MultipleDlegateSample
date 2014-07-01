@@ -15,9 +15,12 @@
 	NSInvocation *copy = [NSInvocation invocationWithMethodSignature:[self methodSignature]];
 	NSUInteger argCount = [[self methodSignature] numberOfArguments];
 	
-	for (int i = 0; i < argCount; i++)
+    for (int i = 0; i < argCount; i++)
 	{
-		char buffer[sizeof(intmax_t)];
+        const char *argType = [[self methodSignature] getArgumentTypeAtIndex:i];
+        NSUInteger size;
+        NSGetSizeAndAlignment(argType, &size, NULL);
+        char buffer[size];
 		[self getArgument:(void *)&buffer atIndex:i];
 		[copy setArgument:(void *)&buffer atIndex:i];
 	}
