@@ -84,12 +84,14 @@
                                                          encoding:NSUTF8StringEncoding]
                                       isEqualToString:@"v"]);
     
-	if ([self shouldCallMainDelegateForSelector:invocation.selector]) {
+    BOOL isShouldCallMainDelegate = [self shouldCallMainDelegateForSelector:invocation.selector];
+    
+	if (isShouldCallMainDelegate) {
 		[invocation invokeWithTarget:self.mainDelegate];
     }
 	
 	NSInvocation *targetInvocation = invocation;
-	if (isMethodReturnSomething) {
+	if (isShouldCallMainDelegate && isMethodReturnSomething) {
 		targetInvocation = [invocation copy];
 	}
 	
