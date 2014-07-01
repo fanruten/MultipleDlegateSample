@@ -14,6 +14,7 @@
 
 @property (nonatomic, weak) id mainDelegate;
 @property (nonatomic, strong) NSPointerArray *delegates;
+@property (nonatomic, assign) Class mainDelegateClass;
 
 @end
 
@@ -34,6 +35,7 @@
 {
     _mainDelegateIsDelegator = mainDelegateIsDelegator;
     _mainDelegate = mainDelegate;
+    _mainDelegateClass = [mainDelegate class];
     _delegates = [NSPointerArray weakObjectsPointerArray];
     [delegates enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [_delegates addPointer:(__bridge void *)obj];
@@ -73,7 +75,7 @@
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
-    return [[self.mainDelegate class] instanceMethodSignatureForSelector:sel];
+    return [_mainDelegateClass instanceMethodSignatureForSelector:sel];
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
